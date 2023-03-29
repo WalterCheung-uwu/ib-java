@@ -1,36 +1,23 @@
-public class Practice_AHHHHHHHH
-{
-	public static void main (String[] args){
-			int num = IBIO.inputInt("enter number of lines: "); 
-			String aa = stars(num);
-			
-			for(int i = 0; i < num; i++){
-				System.out.println(stars(i + 1));
-		}
-			for(int i = num; i > 1; i--){
-				System.out.println(stars(i - 1));
-		}
-	}
+
+public class Practice_AHHHHHHHH {
 	
-	static String stars(int n){
-			String xx = "";
-			for(int i = 0; i < n; i++)
-				xx = xx + "*";
-			return xx;
+	public static void main (String[] args){
+		int array[] = {6, 5, 4, 3, 2, 1};
+		for(int i = 0; i < array.length; i++){
+			if(i > 0){
+				System.out.print(", ");
+				}
+			System.out.print(array[i]);	
+		}
+		System.out.println("");
+		System.out.println("");
+		
+			int temp = array[0];
+			array[0] = array[5];
+			array[5] = temp;
+			
+			for(int i = 0; i < array.length; i++){
+			System.out.print(array[i] + ", ");	
+		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
