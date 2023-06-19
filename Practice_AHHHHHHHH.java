@@ -1,23 +1,17 @@
-
 public class Practice_AHHHHHHHH {
 	
 	public static void main (String[] args){
-		int array[] = {6, 5, 4, 3, 2, 1};
-		for(int i = 0; i < array.length; i++){
-			if(i > 0){
-				System.out.print(", ");
-				}
-			System.out.print(array[i]);	
-		}
-		System.out.println("");
-		System.out.println("");
-		
-			int temp = array[0];
-			array[0] = array[5];
-			array[5] = temp;
-			
-			for(int i = 0; i < array.length; i++){
-			System.out.print(array[i] + ", ");	
-		}
+		for(int i = 0; i < 10; i++){
+			for(int j = 0; j < 3; j++){
+				double x = Math.random() * 2;
+				int y = (int)(x + 1);
+				
+				if(y == 1)
+				System.out.print("H");	
+				else
+				System.out.print("T");
+			}
+			System.out.println("");
+		}	
 	}
 }
