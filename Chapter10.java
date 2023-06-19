@@ -1,31 +1,11 @@
-/*
- * Chapter10.java
- * 
- * Copyright 2023 Walte <Walte@BLUEBERRY>
- * 
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
- * MA 02110-1301, USA.
- * 
- * 
- */
-
 
 public class Chapter10 {
 	
 	public static void main (String[] args) {
-		String s = IBIO.inputString("input a word: ");
+		System.out.println("Pr 10.1");
+		System.out.println("");
+		
+		String s = IBIO.inputString("Input a word: ");
 		char[] x = s.toCharArray();
 		
 		for(int i = 0; i < x.length; i++){
@@ -45,6 +25,32 @@ public class Chapter10 {
 		for(int j = x.length - 2; j >= 0; j--){
 			System.out.print(x[j]);
 		}
-	}
+		
+		System.out.println("");
+		System.out.println("");
+		System.out.println("Pr 10.2");
+		System.out.println("");
+		
+		
+        String binaryNumber = IBIO.inputString("Input Binary Number: ");
+       
+        // Check if the input contains only 0's and 1's
+        if (!binaryNumber.matches("[01]+")) {
+            System.out.println("Error: Invalid input. Please enter a binary number consisting of only 0's and 1's.");
+            System.exit(1);
+        }
+
+        int decimalNumber = 0;
+        int power = 0;
+        for (int i = binaryNumber.length() - 1; i >= 0; i--) {
+            if (binaryNumber.charAt(i) == '1') {
+                decimalNumber += Math.pow(2, power);
+            }
+            power++;
+        }
+
+        System.out.println("The decimal equivalent of " + binaryNumber + " is " + decimalNumber + ".");
+    }
 }
+
 
